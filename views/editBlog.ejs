@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog world</title>
+</head>
+<body class="editpage">
+    <h1>Edit Paragraph</h1>
+    <form action="/edit/<%= index %>?_method=PATCH" method="post">
+        <label>Title of your blog</label><br>
+        <input type="text" name="heading" size="50" value="<%=paragraph.blogTitle%>"><br>
+        <label>Content of your blog</label><br>
+        <textarea name="paragraph" rows="30" cols="100"><%=paragraph.blogContent %></textarea><br>
+        <input type="submit" name="updateBlog" value="Update" style="width: 100px;">
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Physics</title>
+</head>
+<body>
+    <%-include("partials/header.ejs") %>
+    <div class="container">
+        <%if (locals.blogPosts.length < 1){%>
+            <h2 class="handlee-regular">You've no blogs yet.<br>
+                Try creating one..
+            </h2>
+            <form action="/submit" method="post">
+                <input class="createBtn" type="submit" name="createBtn" value="Create Your First Blog">
+            </form>
+        <%}else{%>
+            <div class="secondcontainer" id="bloghead">
+                <div>
+                    <h2 class="handlee-regular">Blog world</h2>
+                </div>
+                <div>
+                    <form action="/submit" method="post">
+                        <input type="submit" name="createBlog" value="Create a New Blog">
+                    </form>
+                </div>
+            </div>
+            <div class="thirdcontainer" id="bogview">
+                <%for (var index=0; index<locals.blogPosts.length; index++){%>
+                    <h3><%=blogPosts[index].blogTitle%></h3>
+                    <p id="editable-para"><%=blogPosts[index].blogContent%></p>
+                    <form action="/edit/<%= index %>" method="get">
+                        <input type="submit" name="editBtn" value="Edit" style="width: 100px;">
+                    </form>
+                    <form action="/delete/<%=index%>?_method=delete" method="post">
+                        <input type="submit" name="deleteBtn" value="Delete" style="width: 100px;">
+                    </form>   
+                <%}%>
+            </div>
+        <%}%>
+    </div>
+
+</body>
+<%-include("partials/footer.ejs") %>
+</html>
+
+

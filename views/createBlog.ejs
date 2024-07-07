@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog world</title>
+</head>
+<body>
+    <%-include("partials/header.ejs") %>
+    <h1 class="handlee-regular">Create your blog here.....</h1>
+    <div class="createContainer">
+        <div>
+            <form action="/" method="post">
+                <label>Title of your blog</label><br>
+                <input type="text" name="title" placeholder="type your title name.." size="50"><br><br>
+                <label>Write your content here</label><br>
+                <textarea name="content" placeholder="type your content.." rows="20" cols="100"></textarea><br>
+                <input class="publishBtn" type="submit" name="publishBtn" value="PUBLISH"><br>
+                <a href="/">Back</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

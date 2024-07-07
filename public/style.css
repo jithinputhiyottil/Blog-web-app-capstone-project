@@ -1,0 +1,68 @@
+body {
+    background-color: #eeedeb;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.handlee-regular {
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    color: #2F3645;
+  }
+  
+  .createBtn{
+    background-color: #E6B9A6;
+    font-size: 20px;
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #2F3645;
+    width: 400px;
+    height: 30px;
+    border-radius: 0.75rem;
+    border-color: #E6B9A6;
+  }
+
+  .createContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: #2F3645;
+    
+  }
+
+  .publishBtn{
+    background-color: #2F3645;
+    background-color: #2F3645;
+    border-radius: 0.75rem;
+    width: 200px;
+    height: 50px;
+    color: #E6B9A6;
+    font-size: 20px;
+  }
+
+  .thirdcontainer{
+    margin: 10px;
+    padding: 2px;
+    width: 70%;
+  }
+  .secondcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #editable-para{
+    overflow-y: auto;
+    max-height: 100vh;
+  }
